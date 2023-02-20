@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+service OrderService {
+      rpc create(CreateOrderRequest) returns (CreateOrderResponse){}
+      rpc getAll (Empty) returns (GetAllOrderResponse){}
+};
+
+message Empty {
+};
+
+message CreateOrderRequest {
+   string product = 1;
+   int32 quantity = 2;
+   float price = 3;
+};
+message CreateOrderResponse {
+    string id = 1;
+       string product = 2;
+      int32 quantity = 3;
+      float price = 4;
+}
+
+message GetAllOrderResponse {
+    repeated CreateOrderResponse orders = 1;
+}
