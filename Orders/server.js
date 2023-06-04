@@ -1,14 +1,3 @@
-// const express = require("express");
-// const app = express();
-
-// app.get("/orders", (req, res) => {
-//   res.send("Orders Returned");
-// });
-
-// app.listen("8080", () => {
-//   console.log("Order Server Started");
-// });
-
 const grpc = require("@grpc/grpc-js");
 const protoLoader = require("@grpc/proto-loader");
 const server = new grpc.Server();
